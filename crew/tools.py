@@ -16,7 +16,7 @@ def web_search_scrape(query: str) -> str:
         return "ERROR: TAVILY_API_KEY is not set."
     resp = requests.post(
         "https://api.tavily.com/search",
-        json={"api_key": key, "query": query, "max_results": 3,
+        json={"api_key": key, "query": query, "max_results": 2,
               "include_raw_content": False},
         timeout=60,
     )

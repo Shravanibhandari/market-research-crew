@@ -14,3 +14,5 @@ Outputs: `output/market_report.pdf`, `output/market_report.md`, `benchmarks.json
 - `crew/` agents/tasks (`build_crew.py`), tools, pandas logic, PDF builder, benchmarks
 - `tests/` pytest tests
 - `data/` sample CSV (fallback)
+
+Note: On the Groq free tier, rate limits can interrupt the crew. main.py retries once, then falls back to a data-driven report so the PDF is still produced.

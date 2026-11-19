@@ -32,7 +32,7 @@ def build_crew(query: str, bench) -> Crew:
     # No agent is fixed on tasks: the manager LLM delegates dynamically.
     t1 = Task(
         description=(f"Research: '{query}'. Search for revenue_billion, net_income_billion, "
-                     "pe_ratio and growth_pct for 5-6 relevant companies. Save them as CSV "
+                     "pe_ratio and growth_pct for 3 relevant companies. Save them as CSV "
                      "text (header: company,revenue_billion,net_income_billion,pe_ratio,"
                      "growth_pct) to output/metrics.csv using the Save Metrics CSV tool."),
         expected_output="Confirmation that output/metrics.csv was saved plus key sources.")
@@ -51,6 +51,6 @@ def build_crew(query: str, bench) -> Crew:
         tasks=[t1, t2, t3],
         process=Process.hierarchical,
         manager_llm=llm,
-        task_callback=bench.log_task,
+        max_rpm=4, task_callback=bench.log_task,
         step_callback=bench.log_step,
         verbose=True)
