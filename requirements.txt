@@ -1,0 +1,8 @@
+crewai>=0.80
+crewai-tools
+pandas
+tabulate
+reportlab
+requests
+python-dotenv
+pytest
