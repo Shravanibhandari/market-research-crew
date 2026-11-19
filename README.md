@@ -1,5 +1,5 @@
 # Multi-Agent Market Research with CrewAI
-- **Repository**: [Insert URL]
+- **Repository**: https://github.com/Shravanibhandari/market-research-crew
 
 ## Setup
 1. `python -m venv .venv` then activate it (Windows: `.venv\Scripts\activate`, Mac/Linux: `source .venv/bin/activate`)
